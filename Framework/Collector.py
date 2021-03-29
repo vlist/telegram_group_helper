@@ -1,5 +1,6 @@
-from .Data import Data
-from . import FrameworkException as FE
+from Data import Data
+import FrameworkException as FE
+
 
 class Collector:
     def __init__(self) -> None:
