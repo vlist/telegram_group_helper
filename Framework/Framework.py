@@ -58,9 +58,9 @@ class Framework():
 
         If a module depends on a feed_back type of data. The feed_back will be treated as a new 
         data_in after "flush" is invoked and the dependencies of the module that reuqires feed_back 
-        will be evaluted every time during run time. And the dependencies provided by the module 
-        will also be treated as a new data_out. All modules that dependends on the data_out will 
-        also be relaunched.
+        will be evaluted multiple times during run time. And the dependencies provided by the module 
+        (The module which is re-launched after the change of feed_back data in data_in) will also be
+        treated as a new data_out. All modules that dependends on the data_out will also be relaunched.
 
         (This method will be complicated... It can build a sub graph and invoke "solveDAG" again 
         for the new graph.)
